@@ -1,0 +1,329 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.page_body {
+  width: 100%;
+  overflow: hidden;
+  z-index: 10;
+}
+.Logo {
+  padding: 10px;
+  border: 1px solid white;
+  color: white;
+}
+
+/* Navbar starts here */
+.navbar {
+  background: #780202;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5em 1em;
+}
+/* Navbar ends here */
+
+.Search_Container {
+  width: 650px;
+  position: relative;
+}
+
+.searchbar__input--container {
+  overflow: hidden;
+  height: 38px;
+  width: 500px;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Dropdown_Search_Card_Container {
+  width: 100%;
+  position: absolute;
+  z-index: 11;
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+  background-color: #ffffff;
+  margin-top: 10px;
+}
+.Dropdown_Search_Card {
+  display: none;
+  padding: 26px 32px;
+  padding-top: 18px;
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+
+.Section_Title {
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.Section_Title_Icon {
+  display: flex;
+  align-items: center;
+}
+.Items_Row {
+  display: flex;
+  gap: 33px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.Items_Row_Two {
+  display: flex;
+  justify-content: space-between;
+}
+.Item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Item_Title {
+  padding-top: 4px;
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  color: #000000;
+}
+.Item_Square {
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+}
+
+.Item_Rounded {
+  height: 60px;
+  width: 60px;
+  border-radius: 4px;
+  border-radius: 50%;
+}
+
+.Badge_Items_Row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-radius: 4px;
+}
+
+.Badge_Item {
+  border-radius: 4px;
+  padding: 1px 15px;
+  background: #e0e0e0;
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.Search_Products_List {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 170px;
+  overflow: hidden scroll;
+  cursor: pointer;
+}
+
+.Search_Products {
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.Search_Products:hover {
+  background: #f5f5f5;
+}
+
+.Pro_Detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5em;
+}
+
+.Pro_Desc {
+  display: flex;
+  /* align-items: center; */
+  gap: 10px;
+  width: 300px;
+}
+
+.Qty_Disc {
+  display: flex;
+  gap: 8px;
+}
+
+.Qty {
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 11px;
+  color: #999faa;
+}
+.Disc {
+  background: #f6d72f;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 11px;
+  color: #000000;
+}
+
+.Title_Qty_Disc {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Title_Price {
+  display: flex;
+  gap: 4.5em;
+}
+
+.Pro_Title,
+.Pro_Price {
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 11px;
+  color: #000000;
+}
+
+.Search_Icon {
+  height: 20px;
+  padding: 9px;
+  background: #f6d72f;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+}
+.Clock_Icon {
+  height: 20px;
+  padding: 9px;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.Search_Input_Container {
+  display: flex;
+  height: 38px;
+  width: 100%;
+}
+
+.Search_Icon_Container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+input[type="text"] {
+  flex: 1;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 4px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.Rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.Rating_Star_Img {
+  height: 10px;
+}
+
+.Rating_Count {
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 11px;
+  color: #000000;
+}
+
+.Top_Result_Img {
+  height: 125px;
+  width: 188px;
+}
+
+.Top_Result {
+  display: flex;
+  flex-direction: column;
+}
+
+.Shop_More {
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  text-decoration-line: underline;
+  color: #999faa;
+  cursor: pointer;
+}
+
+.no_margin {
+  margin: 0 !important;
+}
+.Left_Arrow {
+  width: 12px;
+  margin: 2px 0 -2px 4px;
+}
+
+.Card_Bottom_Section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Show_Me_More {
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  text-decoration-line: underline;
+  color: #000000;
+  cursor: pointer;
+}
+
+.Total_Results {
+  font-family: "Palanquin";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  color: #999faa;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

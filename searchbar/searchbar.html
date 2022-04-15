@@ -10,144 +10,407 @@
       href="https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet/less" type="text/css" href="searchbar.less" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+    <script type="text/javascript">
+      let SearchFiled = document.getElementById("searchbar__input");
+      const Dropdown_Search_Card = document.getElementById(
+        "Dropdown_Search_Card"
+      );
+      let onSearchFocus = () => {
+        console.log("hello");
+        document.getElementById("Dropdown_Search_Card1").style.display =
+          "block";
+        document.getElementById("Dropdown_Search_Card2").style.display = "none";
+        // document.getElementById('page_body').style.display = 'none'
+      };
+
+      let hadleSubmit = () => {
+        document.getElementById("Dropdown_Search_Card1").style.display = "none";
+        document.getElementById("Dropdown_Search_Card2").style.display =
+          "block";
+        console.log("submit");
+      };
+    </script>
     <title>Document</title>
   </head>
   <body>
-    <div class="searchbar__input--container">
-      <div class="searchbar__input--dropdown"></div>
-      <div class="searchbar__input--area">
-        <input
-          type="text"
-          class="searchbar__input--html"
-          name="searchbar__input--html"
-          id="searchbar__input--html"
-        />
+    <div class="navbar">
+      <div class="Logo">Logo</div>
+      <div class="Search_Container">
+        <div class="Search_Input_Container">
+          <input
+            type="text"
+            class="searchbar__input--html"
+            name="searchbar__input--html"
+            id="searchbar__input"
+            onfocus="onSearchFocus()"
+          />
+          <div class="Search_Icon_Container" onclick="hadleSubmit()">
+            <img class="Search_Icon" src="./Images/search.png" />
+          </div>
+        </div>
+
+        <div class="Dropdown_Search_Card_Container">
+          <div class="Dropdown_Search_Card" id="Dropdown_Search_Card1">
+            <div class="Section_Title">Trending products</div>
+            <div class="Items_Row">
+              <div class="Item">
+                <img class="Item_Square" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+              </div>
+              <div class="Item">
+                <img class="Item_Square" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+              </div>
+              <div class="Item">
+                <img class="Item_Square" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+              </div>
+              <div class="Item">
+                <img class="Item_Square" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+              </div>
+            </div>
+            <div class="Section_Title">Featuring vendors</div>
+            <div class="Items_Row">
+              <div class="Item">
+                <img class="Item_Rounded" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+                <div class="Rating">
+                  <div class="Rating_Star">
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Rating_Count">2.5</div>
+                </div>
+              </div>
+              <div class="Item">
+                <img class="Item_Rounded" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+                <div class="Rating">
+                  <div class="Rating_Star">
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Rating_Count">2.5</div>
+                </div>
+              </div>
+              <div class="Item">
+                <img class="Item_Rounded" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+                <div class="Rating">
+                  <div class="Rating_Star">
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Rating_Count">2.5</div>
+                </div>
+              </div>
+              <div class="Item">
+                <img class="Item_Rounded" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+                <div class="Rating">
+                  <div class="Rating_Star">
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Rating_Count">2.5</div>
+                </div>
+              </div>
+              <div class="Item">
+                <img class="Item_Rounded" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+                <div class="Rating">
+                  <div class="Rating_Star">
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Rating_Count">2.5</div>
+                </div>
+              </div>
+            </div>
+            <div class="Section_Title">
+              <div>Recent searches</div>
+              <div class="Section_Title_Icon">
+                <img class="Clock_Icon" src="./Images//clock.png" alt="" />
+              </div>
+            </div>
+            <div class="Badge_Items_Row">
+              <div class="Badge_Item">Food Fish</div>
+              <div class="Badge_Item">Banana</div>
+              <div class="Badge_Item">Meat</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="Dropdown_Search_Card_Container">
+          <div class="Dropdown_Search_Card" id="Dropdown_Search_Card2">
+            <div class="Items_Row_Two">
+              <div>
+                <div class="Section_Title">Top Result</div>
+                <div class="Top_Result">
+                  <div class="">
+                    <img
+                      class="Top_Result_Img"
+                      src="./Images/item.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <div class="Section_Title no_margin">
+                      Grand Fresh Supermart
+                    </div>
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star.png"
+                      alt=""
+                    />
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star.png"
+                      alt=""
+                    />
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star.png"
+                      alt=""
+                    />
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star_gray.png"
+                      alt=""
+                    />
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star_gray.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Shop_More">
+                    Shop more
+                    <span
+                      ><img class="Left_Arrow" src="./Images/right.png" alt=""
+                    /></span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div class="Section_Title">Products</div>
+                  <div class="Search_Products_List">
+                    <div class="Search_Products">
+                      <div class="Pro_Detail">
+                        <div class="Pro_Desc">
+                          <img class="Item_Square" src="./images/item.png" />
+                          <div class="Title_Qty_Disc">
+                            <div class="Title_Price">
+                              <div class="Pro_Title">Crets Fish Cubes</div>
+                              <div class="Pro_Price">$520</div>
+                            </div>
+                            <div class="Qty_Disc">
+                              <div class="Qty">QTY-1</div>
+                              <div class="Disc">18% off</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Search_Products">
+                      <div class="Pro_Detail">
+                        <div class="Pro_Desc">
+                          <img class="Item_Square" src="./images/item.png" />
+                          <div class="Title_Qty_Disc">
+                            <div class="Title_Price">
+                              <div class="Pro_Title">Crets Fish Cubes</div>
+                              <div class="Pro_Price">$520</div>
+                            </div>
+                            <div class="Qty_Disc">
+                              <div class="Qty">QTY-1</div>
+                              <div class="Disc">18% off</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Search_Products">
+                      <div class="Pro_Detail">
+                        <div class="Pro_Desc">
+                          <img class="Item_Square" src="./images/item.png" />
+                          <div class="Title_Qty_Disc">
+                            <div class="Title_Price">
+                              <div class="Pro_Title">Crets Fish Cubes</div>
+                              <div class="Pro_Price">$520</div>
+                            </div>
+                            <div class="Qty_Disc">
+                              <div class="Qty">QTY-1</div>
+                              <div class="Disc">18% off</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Search_Products">
+                      <div class="Pro_Detail">
+                        <div class="Pro_Desc">
+                          <img class="Item_Square" src="./images/item.png" />
+                          <div class="Title_Qty_Disc">
+                            <div class="Title_Price">
+                              <div class="Pro_Title">Crets Fish Cubes</div>
+                              <div class="Pro_Price">$520</div>
+                            </div>
+                            <div class="Qty_Disc">
+                              <div class="Qty">QTY-1</div>
+                              <div class="Disc">18% off</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Search_Products">
+                      <div class="Pro_Detail">
+                        <div class="Pro_Desc">
+                          <img class="Item_Square" src="./images/item.png" />
+                          <div class="Title_Qty_Disc">
+                            <div class="Title_Price">
+                              <div class="Pro_Title">Crets Fish Cubes</div>
+                              <div class="Pro_Price">$520</div>
+                            </div>
+                            <div class="Qty_Disc">
+                              <div class="Qty">QTY-1</div>
+                              <div class="Disc">18% off</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="Search_Products">
+                      <div class="Pro_Detail">
+                        <div class="Pro_Desc">
+                          <img class="Item_Square" src="./images/item.png" />
+                          <div class="Title_Qty_Disc">
+                            <div class="Title_Price">
+                              <div class="Pro_Title">Crets Fish Cubes</div>
+                              <div class="Pro_Price">$520</div>
+                            </div>
+                            <div class="Qty_Disc">
+                              <div class="Qty">QTY-1</div>
+                              <div class="Disc">18% off</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="Section_Title">Featuring vendors</div>
+            <div class="Items_Row">
+              <div class="Item">
+                <img class="Item_Rounded" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+                <div class="Rating">
+                  <div class="Rating_Star">
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Rating_Count">2.5</div>
+                </div>
+              </div>
+              <div class="Item">
+                <img class="Item_Rounded" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+                <div class="Rating">
+                  <div class="Rating_Star">
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Rating_Count">2.5</div>
+                </div>
+              </div>
+              <div class="Item">
+                <img class="Item_Rounded" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+                <div class="Rating">
+                  <div class="Rating_Star">
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Rating_Count">2.5</div>
+                </div>
+              </div>
+              <div class="Item">
+                <img class="Item_Rounded" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+                <div class="Rating">
+                  <div class="Rating_Star">
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Rating_Count">2.5</div>
+                </div>
+              </div>
+              <div class="Item">
+                <img class="Item_Rounded" src="./images/item.png" />
+                <div class="Item_Title">Fish</div>
+                <div class="Rating">
+                  <div class="Rating_Star">
+                    <img
+                      class="Rating_Star_Img"
+                      src="./Images/star.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="Rating_Count">2.5</div>
+                </div>
+              </div>
+            </div>
+            <div class="Card_Bottom_Section">
+              <div class="Total_Results">234 Results</div>
+              <div class="Show_Me_More">
+                Show me more results
+                <span
+                  ><img class="Left_Arrow" src="./Images/right.png" alt=""
+                /></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="searchbar__input--icon">Search Icon</div>
+      <div class="Logo">Logo</div>
     </div>
-    <div class="searchbar__container">
-      <div class="searchbar__subcontainer">
-        <div class="searchbar__top-result--container">
-          <div class="searchbar__top-result-title">Top Result</div>
-          <div class="searchbar__top-result-card">
-            <div class="searchbar__top-result-card-title">
-              Grand Fresh Supermart
-            </div>
-            <div class="searchbar__top-result-card-rating">BigStar SVG</div>
-            <div class="searchbar__top-result-card-shop-more">
-              Shop More
-              <span>Arrow SVG</span>
-            </div>
-          </div>
-        </div>
-        <div class="searchbar__products">
-          <div class="searchbar__products--title">Products</div>
-          <div class="searchbar__product--list">
-            <div class="searchbar__product">
-              <div class="searchbar__product--image"></div>
-              <div class="searchbar__product--details">
-                <div class="searchbar__product--name">Crest fish Cubes</div>
-                <div class="searchbar__product--price">$520</div>
-              </div>
-              <div class="searchbar__product--qty-details">
-                <div class="searchbar__product--quantity">QTY-1</div>
-                <div class="searchbar__product--off">18% off</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="searchbar__featuring-vendors">
-        <div class="searchbar__featuring-vendors--title">Featuring Vendor</div>
-        <div class="searchbar__featuring-vendors--list">
-          <div class="searchbar__featuring-vendors--card">
-            <div class="searchbar__featuing-vendors--card-image"></div>
-            <div class="searchbar__featuing-vendors--card-title">Vendor_1</div>
-            <div class="searchbar__featuing-vendors--card-rating">
-              <span class="bigstar-svg">Star SVG</span> 2.5
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="searchbar__footer">
-        <div class="searchbar__footer--count">234 result</div>
-        <div class="searchbar__footer--more-result">
-          Show me more results <span class="arrow-svg">Arrow SVG</span>
-        </div>
+    <div class="">
+      <div class="page_body" id="page_body">
+        <img src="./Images/gradient.png" alt="" />
       </div>
     </div>
   </body>
 </html>
-
-<!-- Search Icon -
-<svg
-  width="17"
-  height="18"
-  viewBox="0 0 17 18"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
->
-  <rect width="17" height="18" fill="url(#pattern0)" />
-  <defs>
-    <pattern
-      id="pattern0"
-      patternContentUnits="objectBoundingBox"
-      width="1"
-      height="1"
-    >
-      <use xlink:href="#image0_2_1431" transform="scale(0.0178571)" />
-    </pattern>
-    <image
-      id="image0_2_1431"
-      width="56"
-      height="56"
-      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAAAXNSR0IArs4c6QAAAc5JREFUaEPt2lFygzAMBFBzitz/eD1FM+mUjCFg7UorgwP9JZb0LOEhoVMJ/j1K+fWE+Cll8qxj17iSeFFbxWVDKaAStsZmQWFgJq7GqqEmsBcsC9kEHoGboapO7gK9uK3CvLFe2Ch0E8gWxBbBxGdjrw+vD2DP5GiuCNIFjCRc73A2cgFEkilxNTYr9xuYlYB5tLJq8GwuDPQEZ3DzZ9XIP6A6qAd2GaB6w6czdS+ji6cEWl1kzoMmkAkUue+21qom67RAVRevCzxyPJHDBq1vt4NoAPW9hz6+ofXdwMwOWbFbJ+ndwf/du+4pqvg9xBpB63rqiN5Aa/uD17s8qh3ZRcV4vuo3v/Cix3GwYYvlqu5BwCO62B3YE6nEvTtofTXpBbRwnjqo30Uz78cM3KKDSBc9O4gcPlm4DyCKVEIRXCRf6O1SZGRR2DwB3lyy94NoASysHnE0R71GBkTuNcVnWOQp39FbG8EgTSBz8FiFKa+jSAjYC1kXjdyrCBIGzruPJPZ0yvvPCxaSBiqhVnHo5LTiuIF1l5iuIqj1BCDx9+JKgJ6RZNd4kcMAveM6FNCDHA7IIocEMshhgShyaCCCHB5oIb8C2EJ+DXAP+QTyfrWnXJlYPQAAAABJRU5ErkJggg=="
-    />
-  </defs>
-</svg> -->
-
-<!-- BigStar SVG -
-<svg
-  width="15"
-  height="13"
-  viewBox="0 0 15 13"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M7.27673 0L8.88363 4.94552H14.0837L9.87675 8.00202L11.4836 12.9475L7.27673 9.89104L3.06982 12.9475L4.67672 8.00202L0.469807 4.94552H5.66984L7.27673 0Z"
-    fill="#F7B603"
-  />
-</svg> -->
-
-<!-- grey star color - #C4C4C4; -->
-
-<!-- Star SVG - 
-<svg
-                  width="10"
-                  height="10"
-                  viewBox="0 0 10 10"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M5 0.238281L6.12257 3.6932H9.75528L6.81636 5.82845L7.93893 9.28337L5 7.14811L2.06107 9.28337L3.18364 5.82845L0.244718 3.6932H3.87743L5 0.238281Z"
-                    fill="#F7B603"
-                  /> -->
-
-<!-- # Arrow Svg - 
-<svg
-                width="10"
-                height="8"
-                viewBox="0 0 10 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9.35334 4.35355C9.5486 4.15829 9.5486 3.84171 9.35334 3.64645L6.17136 0.464467C5.9761 0.269204 5.65952 0.269204 5.46425 0.464467C5.26899 0.659729 5.26899 0.976311 5.46425 1.17157L8.29268 4L5.46425 6.82843C5.26899 7.02369 5.26899 7.34027 5.46425 7.53553C5.65951 7.7308 5.9761 7.7308 6.17136 7.53553L9.35334 4.35355ZM-0.000213667 4.5L8.99979 4.5L8.99979 3.5L-0.000213579 3.5L-0.000213667 4.5Z"
-                  fill="#999FAA"
-                />
-              </svg> -->
